@@ -1,5 +1,5 @@
 <template>
-  <div class v-catalog-item>
+  <div class="v-catalog-item">
     <img
       class="v-catalog-item__image"
       v-bind:src="require('../assets/images/'+ product_data.image)"
