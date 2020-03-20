@@ -1,19 +1,17 @@
 <template>
   <div class="v-main-wrapper">
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
     <p>{{title}}</p>
-    <v-catalog />
-    <v-cart />
   </div>
 </template>
 <script>
-import vCatalog from "./v-catalog";
-import vCart from "./v-cart";
+import { mapGetters } from "vuex";
+
 export default {
   name: "v-main-wrapper",
-  components: {
-    vCatalog,
-    vCart
-  },
+
   props: {},
   data() {
     return {
@@ -23,18 +21,12 @@ export default {
   computed: {},
   methods: {},
   watch: {},
-  mounted() {
-    console.log("Hello? I am alive!");
-  }
+  mounted() {}
 };
 </script>
-<style scoped>
+<style>
 .v-main-wrapper {
   max-width: 900px;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   margin: 0 auto;
 }
 </style>

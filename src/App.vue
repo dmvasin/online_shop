@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <v-main-wrapper />
+    <!-- <v-select :options="options" @select="optionSelect" :selected="selected" /> -->
+    <p>{{selected}}</p>
   </div>
 </template>
 
@@ -11,7 +13,9 @@ export default {
   name: "App",
   components: {
     vMainWrapper
-  }
+  },
+
+  methods: {}
 };
 </script>
 
